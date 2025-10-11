@@ -10,6 +10,6 @@ FirstDayofJanuary = 1
 
 day = (FirstDayofJanuary+(k-1)) % 7
 
-nedelya = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 
-print(nedelya[day])
+
+print(day)

@@ -1,34 +1,28 @@
-def find_closest_point_while(a_coord, b_coord, c_coord):
-    """
-    Определяет ближайшую к A точку (B или C), 
-    используя цикл while (выполняется 1 раз).
-    """
-    closest_point = ""
-    min_distance = 0
+'''
+2. На числовой оси расположены три точки: А, В, С. Определить, 
+какая из двух последних точек (В или С) расположена ближе к А, 
+и вывести эту точку и ее расстояние от точки А.
+'''
+
+try:
     
-    # Искусственное использование цикла while для однократного выполнения
-    while True:
-        # Вычисляем расстояние от A до B
-        distance_ab = abs(a_coord - b_coord)
+    a = float(input("Введите координату точки A: "))
+    b = float(input("Введите координату точки B: "))
+    c = float(input("Введите координату точки C: "))
+                    
+    dist_ab = abs(a - b)
+    dist_ac = abs(a - c)
 
-        # Вычисляем расстояние от A до C
-        distance_ac = abs(a_coord - c_coord)
+    
+    if dist_ab <= dist_ac:
+        
+        print(f"Точка B расположена ближе к A.")
+        print(f"Расстояние: {dist_ab}")
+    else:
+        
+        print(f"Точка C расположена ближе к A.")
+        print(f"Расстояние: {dist_ac}")
 
-        # Сравниваем расстояния
-        if distance_ab <= distance_ac:
-            closest_point = 'B'
-            min_distance = distance_ab
-        else:
-            closest_point = 'C'
-            min_distance = distance_ac
-            
-        # Прерываем цикл, так как расчет завершен
-        break
+except ValueError:
+    print("Ошибка: неверный формат ввода. Пожалуйста, вводите числа.")
 
-    print(f"Координаты: A={a_coord}, B={b_coord}, C={c_coord}")
-    print(f"Ближайшая точка к A: {closest_point}")
-    print(f"Расстояние от A до ближайшей точки: {min_distance}")
-
-# Пример использования
-a, b, c = 10, 0, 8
-find_closest_point_while(a, b, c)

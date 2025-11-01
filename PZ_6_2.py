@@ -7,5 +7,5 @@ def task(A):
 
 A = list(map(int,input ("Введите элементы списка А через пробел: ").split()))
 
-print(f"Задача 2: {task(A)}")
+print(f"{task(A)}")
 

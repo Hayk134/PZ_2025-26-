@@ -11,6 +11,6 @@ def task(A):
 
     return [0] + A[:-1]
 
-A_2 = [int(x) for x in input ("Введите элементы списка А через пробел: ").split()]
+A_2 = [random.randint(1, 20) for _ in range(10)]
 
 print(f"{task(A_2)}")

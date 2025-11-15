@@ -8,11 +8,10 @@ def task(A, K):
     value = A[K - 1]
     return [x + value for x in A]
 
-# 
-A = list(map(int,input ("Введите элементы списка А через пробел: ").split()))
+
+A = [int(x) for x in input ("Введите элементы списка А через пробел: ").split()]
 K = 4
 result = task(A, K)
 
 print(f"исходное {A}, k {K}, значение A[K]: {A[K-1]}")
 print(f"{result}")
-

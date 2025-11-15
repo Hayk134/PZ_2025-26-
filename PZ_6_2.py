@@ -5,7 +5,7 @@
 def task(A):
     return A[1::2] + A[0::2]
 
-A = list(map(int,input ("Введите элементы списка А через пробел: ").split()))
+A = [int(x) for x in input ("Введите элементы списка А через пробел: ").split()]
 
 print(f"{task(A)}")
 

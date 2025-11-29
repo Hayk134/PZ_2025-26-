@@ -10,7 +10,7 @@ def task(A, K):
 
 
 A = [random.randint(1, 20) for _ in range(10)]
-K = 4
+K = int(input())
 result = task(A, K)
 
 print(f"исходное {A}, k {K}, значение A[K]: {A[K-1]}")

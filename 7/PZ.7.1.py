@@ -4,11 +4,13 @@
 только один пробел, то вывести пустую строку.
 '''
 def stroka (text):
-    f, l = text.find(''), text.rfind('')
+    f = text.find(" ") 
+    l = text.find(" ", f + 1)
+
     
-    if f != l :
+    if  f != -1 and l != -1 :
         return text[f + 1 : l]
     else :
         return""
-test = "Тут есть много пробл в " 
-print(stroka("Тут есть много про"))
+
+print(stroka("I like banana"))

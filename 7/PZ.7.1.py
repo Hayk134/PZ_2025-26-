@@ -3,8 +3,12 @@
 расположенную между первым и вторым пробелом исходной строки. Если строка содержит 
 только один пробел, то вывести пустую строку.
 '''
-C = 'b'
-S = 'rab'
-S0 ='XX'
-result = (C + S0).join(S.split(C))
-print(f"{result}")
+def stroka (text):
+    f, l = text.find(''), text.rfind('')
+    
+    if f != l :
+        return text[f + 1 : l]
+    else :
+        return""
+test = "Тут есть много пробл в " 
+print(stroka("Тут есть много про"))

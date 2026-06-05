@@ -1,0 +1,5 @@
+Record FM: http://radiorecord.ru/stream.mp3
+Pilot FM: http://stream.hoster.by:8081/pilotfn/audio/icecast.audio
+Rock Radio: https://rock-station.ru/live/heavy
+Local Test: http://192.168.1.1:8000
+Simple Link: https://google.com

@@ -1,0 +1,50 @@
+
+f = open('data_30_1.txt', 'w')
+f.write('12 -5 8 -3 24 -5 16 7')
+f.close()
+
+f = open('data_30_2.txt', 'w')
+f.write('-10 20 5 20 -4 8 15')
+f.close()
+
+
+f = open('data_30_1.txt', 'r')
+k1 = []
+for x in f.read().split():
+    k1.append(int(x))
+f.close()
+
+
+f = open('data_30_2.txt', 'r')
+k2 = []
+for x in f.read().split():
+    k2.append(int(x))
+f.close()
+
+k = k1 + k2
+
+idx_min = k1.index(min(k1))
+
+
+max_f2 = max(k2)
+idx_max = 0
+for i in range(len(k2)):
+    if k2[i] == max_f2:
+        idx_max = i
+
+
+k_4 = []
+for x in k:
+    if x % 4 == 0:
+        k_4.append(x)
+
+
+print(f"Элементы первого и второго файлов: {k}" + '\n')
+print( f"Количество элементов первого и второго файлов: {len(k1)} и {len(k2)}" + '\n')
+print( f"Индекс первого минимально элемента первого файла: {idx_min}" + '\n')
+print( f"Индекс последнего максимального элемента второго файла: {idx_max}" + '\n')
+print( f"Элементы кратные 4 первого и второго файлов: {k_4}" + '\n')
+
+
+
+

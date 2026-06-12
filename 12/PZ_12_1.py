@@ -7,12 +7,8 @@ matrix = [
     [18,  7, 10],
     [1,  25,  8]
 ]
+zero_matrix = [[0 if x > 10 else x for x in row] for row in matrix]
 
 
-for i in range(len(matrix)):
-    for j in range(len(matrix[i])):
-        if matrix[i][j] > 10:
-            matrix[i][j] = 0
-
-for row in matrix:
+for row in zero_matrix:
     print(row)

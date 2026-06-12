@@ -2,20 +2,19 @@
 1. Даны средние значения температур за каждый месяц в году. Найти минимальное и
 максимальное значения температур за год. Вывести значения температур по временам года.
 '''
+temps = [-10, -8, -2, 6, 15, 20, 23, 21, 14, 7, 0, -6]
+min_temp = min(temps)
+max_temp = max(temps)
 
-temperatures = [-10, -8, -2, 6, 15, 20, 23, 21, 14, 7, 0, -6]
+winter = [temps[i] for i in [0, 1, 11]]
+spring = [temps[i] for i in range(2, 5)]
+summer = [temps[i] for i in range(5, 8)]
+autumn = [temps[i] for i in range(8, 11)]
 
-min_temp = min(temperatures)
-max_temp = max(temperatures)
+print(f"Минимальная температура: {min_temp}")
+print(f"Максимальная температура: {max_temp}")
+print(f"Зима: {winter}, Весна: {spring}, Лето: {summer}, Осень: {autumn}")
 
-winter = [temperatures[0], temperatures[1], temperatures[11]]
-spring = temperatures[2:5]
-summer = temperatures[5:8]
-autumn = temperatures[8:11]
 
-print("Минимальная температура за год:", min_temp)
-print("Максимальная температура за год:", max_temp)
-print("Зима:", winter)
-print("Весна:", spring)
-print("Лето:", summer)
-print("Осень:", autumn)
+
+

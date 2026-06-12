@@ -4,23 +4,24 @@
 Определить в каких турагенствах можно приобрести туры в Канаду, а в каких в США
 '''
 
-voyage = ["Мексика", "Канада", "Израиль", "Италия", "США"]
-reina = ["Англия", "Япония", "Канада", "ЮАР"]
-raduga = ["США", "Испания", "Швеция", "Австралия"]
+
+voyage = {'Meksika': "Мексика", 'Canada': "Канада", 'Israil': "Израиль", 'Italy': "Италия", 'USA': "США"}
+reina = {'England': "Англия", 'Japan': "Япония", 'Canada': "Канада", 'YUAR': "ЮАР"}
+raduga = {'USA': "США", 'Spain': "Испания", 'Sweden': "Швеция", 'Austarlly': "Австралия"}
 
 print("Туры в Канаду можно купить в:")
-if "Канада" in voyage:
+if 'Canada' in voyage:
     print("- Вояж")
-if "Канада" in reina:
+if 'Canada' in reina:
     print("- Рейна Тур")
-if "Канада" in raduga:
+if 'Canada' in raduga:
     print("- Радуга")
 
 
 print("Туры в США можно купить в:")
-if "США" in voyage:
+if 'USA' in voyage:
     print("- Вояж")
-if "США" in reina:
+if 'USA' in reina:
     print("- Рейна Тур")
-if "США" in raduga:
+if 'USA' in raduga:
     print("- Радуга")

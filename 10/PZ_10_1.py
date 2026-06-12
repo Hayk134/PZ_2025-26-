@@ -21,7 +21,7 @@ f.write('-10 20 5 20 -4 8 15')
 f.close()
 
 
-f = open('data_30_1.txt', 'r')
+f = open('data_30_1.txt')
 k1 = []
 for x in f.read().split():
     k1.append(int(x))

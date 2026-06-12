@@ -1,16 +1,12 @@
 '''
  Составить генератор (yield), который преобразует все буквенные символы в заглавные
 '''
-def yeld(text):
-    for char in text:
-        yield char.upper()
+yeld = lambda generator: (yield from (char.upper() for char in generator))
 
-
-source = "Hello, World!"
+text = "Hello, World!"
 result = ""
-for sym in yeld(source):
-    result += sym
 
+for char in yeld(text):
+    result += char
 
-print(source)
 print(result)

@@ -4,12 +4,14 @@
 выделен полужирным).
 '''
 
-f = open("radio_stations.txt", "r")
-for line in f:
-    if "http" in line:
-        url = line[line.find("http"):].strip()
-        parts = url.split("//")[1]
-        domain_port = parts.split("/")[0]
-        domain = domain_port.split(":")[0]
-        print(domain)
-f.close()
+with open("radio_stations.txt", "r") as f:
+
+    domains = (
+        line[line.find("http"):].strip().split("//")[1].split("/")[0].split(":")[0]
+        for line in f
+        if "http" in line
+    )
+
+
+    for d in domains:
+        print(d)

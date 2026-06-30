@@ -5,23 +5,16 @@
 '''
 
 
-voyage = {'Meksika': "Мексика", 'Canada': "Канада", 'Israil': "Израиль", 'Italy': "Италия", 'USA': "США"}
-reina = {'England': "Англия", 'Japan': "Япония", 'Canada': "Канада", 'YUAR': "ЮАР"}
-raduga = {'USA': "США", 'Spain': "Испания", 'Sweden': "Швеция", 'Austarlly': "Австралия"}
+voyage = {"Мексика","Канада","Израиль","Италия","США"}
+reina = {"Англия","Япония","Канада","ЮАР"}
+raduga = {"США","Испания","Швеция","Австралия"}
 
 print("Туры в Канаду можно купить в:")
-if 'Canada' in voyage:
-    print("- Вояж")
-if 'Canada' in reina:
-    print("- Рейна Тур")
-if 'Canada' in raduga:
-    print("- Радуга")
-
+if 'Канада' in voyage:print("- Вояж")
+if 'Канада' in reina:print("- Рейна Тур")
+if 'Канада' in raduga:print("- Радуга")
 
 print("Туры в США можно купить в:")
-if 'USA' in voyage:
-    print("- Вояж")
-if 'USA' in reina:
-    print("- Рейна Тур")
-if 'USA' in raduga:
-    print("- Радуга")
+if 'США' in voyage:print("- Вояж")
+if 'США' in reina:print("- Рейна Тур")
+if 'США' in raduga:print("- Радуга")

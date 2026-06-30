@@ -4,14 +4,9 @@
 выделен полужирным).
 '''
 
+import re
 with open("radio_stations.txt", "r") as f:
-
-    domains = (
-        line[line.find("http"):].strip().split("//")[1].split("/")[0].split(":")[0]
-        for line in f
-        if "http" in line
-    )
-
-
-    for d in domains:
-        print(d)
+    for line in f:
+        match = re.search(r"https?://([^:/\s]+)",line)
+        if match:
+            print(match.group(1))
